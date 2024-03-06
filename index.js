@@ -6,6 +6,10 @@ dotenv.config()
 
 const app = express()
 
+// mostrar datos de formularios
+app.use(express.json({ limit: '2mb' }))
+app.use(cors())
+
 // middlewares
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -26,10 +30,6 @@ app.post('/login', (req, res) => {
 app.get('/', (req, res) => {
   res.send('NEST CONSULTORES - LOGIN APP')
 })
-
-// mostrar datos de formularios
-app.use(express.json({ limit: '2mb' }))
-app.use(cors())
 
 // port
 const port = process.env.PORT
