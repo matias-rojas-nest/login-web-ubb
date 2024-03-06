@@ -23,6 +23,10 @@ app.post('/login', (req, res) => {
   }
 })
 
+app.get('/', (req, res) => {
+  res.send('NEST CONSULTORES - LOGIN APP')
+})
+
 // mostrar datos de formularios
 app.use(express.json({ limit: '2mb' }))
 app.use(cors())
