@@ -32,7 +32,7 @@ app.use(express.json({ limit: '2mb' }))
 app.use(cors())
 
 // port
-const port = 3003
+const port = process.env.PORT
 
 app.listen(port, () => {
   console.log(`Server's running at port ${port}`)
